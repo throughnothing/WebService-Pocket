@@ -1,0 +1,5 @@
+#!/usr/bin/env perl
+
+use WebService::Pocket::Script;
+
+WebService::Pocket::Script->new_with_options()->run();
