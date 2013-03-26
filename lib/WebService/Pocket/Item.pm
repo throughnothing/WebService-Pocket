@@ -3,6 +3,8 @@ package WebService::Pocket::Item;
 use Data::Dumper;
 use Moose;
 use Moose::Util::TypeConstraints;
+use DateTime;
+
 
 subtype 'WebService::Pocket::DateTime' => as class_type('DateTime');
 subtype 'WebService::Pocket::Tags' => as 'ArrayRef';
