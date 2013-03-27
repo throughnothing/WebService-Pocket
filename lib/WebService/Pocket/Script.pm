@@ -5,7 +5,7 @@ use Moose;
 extends 'WebService::Pocket'; # XXX: this would ideally be a role :/
 
 with 'MooseX::SimpleConfig';
-with 'MooseX::Getopt';
+with 'MooseX::Getopt' => { -version => 0.48 };
 
 # XXX: is this good enough?
 has '+configfile' => (
@@ -19,7 +19,7 @@ for qw/api_key base_url ua json items list_since/;
 has "+$_" => (documentation => "Set $_. Can also be set in ~/.pocketrc")
 for qw/username password/;
 
-sub print_usage_text {
+before 'print_usage_text' => sub {
     print <<END;
 $0 - Wrap up Webservice::Pocket in a script
 
@@ -33,7 +33,7 @@ Commands:
   add <url> [<url>]: Add url(s) to your pocket list
 
 END
-}
+};
 
 
 sub config_any_args {
