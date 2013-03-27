@@ -6,6 +6,7 @@ use Moose;
 use HTTP::Tiny;
 use JSON;
 use Try::Tiny;
+use WebService::Pocket::Item;
 
 # ABSTRACT: Client for the Pocket api (http://getpocket.com/api/)
 
