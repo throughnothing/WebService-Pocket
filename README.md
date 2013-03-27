@@ -129,3 +129,8 @@ law.
 
 Works under CC0 do not require attribution. When citing the work, you should
 not imply endorsement by the author.
+
+# CONTRIBUTORS
+
+- Andreas Marienborg <andreas.marienborg@gmail.com>
+- ben hengst <notbenh@cpan.org>
