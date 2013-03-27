@@ -4,7 +4,7 @@ WebService::Pocket - Client for the Pocket api (http://getpocket.com/api/)
 
 # VERSION
 
-version 0.001
+version 0.002
 
 # SYNOPSIS
 
@@ -16,7 +16,7 @@ version 0.001
     );
 
     # Get list of read items as Array of WebService::Pocket::Item objects
-    my $items = $p->list( state => 1 )
+    my $items = $p->list( state => 1 );
 
     # Add an item
     $p->add({ url => 'http://www.article.com', title => 'My Title' });

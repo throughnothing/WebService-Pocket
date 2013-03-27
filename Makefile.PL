@@ -20,20 +20,25 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "WebService-Pocket",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/pocket"
+  ],
   "LICENSE" => "unrestricted",
   "NAME" => "WebService::Pocket",
   "PREREQ_PM" => {
     "Data::Dumper" => 0,
+    "DateTime" => 0,
     "HTTP::Tiny" => 0,
     "JSON" => 0,
     "Moose" => 0,
     "Moose::Util::TypeConstraints" => 0,
+    "MooseX::Getopt" => 0,
+    "MooseX::SimpleConfig" => 0,
     "Try::Tiny" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }
