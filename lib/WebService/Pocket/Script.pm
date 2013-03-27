@@ -5,7 +5,7 @@ use Moose;
 extends 'WebService::Pocket'; # XXX: this would ideally be a role :/
 
 with 'MooseX::SimpleConfig';
-with 'MooseX::Getopt';
+with 'MooseX::Getopt' => { -version => 0.48 };
 
 # XXX: is this good enough?
 has '+configfile' => (
