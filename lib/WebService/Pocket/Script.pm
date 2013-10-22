@@ -31,6 +31,7 @@ password=s3cr3t
 Commands:
 
   add <url> [<url>]: Add url(s) to your pocket list
+  list             : List unread items in pocket
 
 END
 };
@@ -67,6 +68,17 @@ sub cmd_add {
     print join("\n*", map { $_->url } @$res);
 }
 
+sub cmd_list {
+    my ($self, @args) = @_;
+
+    my $list = $self->list(state => 'unread');
+
+    foreach my $item (@$list) {
+        # Not everything has a title. In those cases, show the url.
+        my $title = $item->{title} || $item->{url};
+        print "* $title\n";
+    }
+}
 
 
 1;
