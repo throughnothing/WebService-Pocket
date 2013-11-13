@@ -76,17 +76,17 @@ Or multiple items via an ArrayRef:
 
 Note that only the `url` field is required for each added item, but you
 can set the `title` as well if you like. The `add` function will always
-return an ArrayRef of [WebService::Pocket::Item](http://search.cpan.org/perldoc?WebService::Pocket::Item) objects if it succeeded.
+return an ArrayRef of [WebService::Pocket::Item](https://metacpan.org/pod/WebService::Pocket::Item) objects if it succeeded.
 
 ## list
 
 Allows you to retrieve the list of items in your `Pocket` account.  Returns
-a list of [WebService::Pocket::Item](http://search.cpan.org/perldoc?WebService::Pocket::Item) objects.
+a list of [WebService::Pocket::Item](https://metacpan.org/pod/WebService::Pocket::Item) objects.
 
     my $items = $p->list;
 
 You can pass in any parameters available to the
-[Pocket API Get](http://getpocket.com/api/docs/\#get) request.
+[Pocket API Get](http://getpocket.com/api/docs/#get) request.
 
     # Get only read items, with tags
     $p->list( state = 0, tags => 1 );
@@ -96,7 +96,7 @@ You can pass in any parameters available to the
 
 ## stats
 
-Stats will return a [WebService::Pocket::Stats](http://search.cpan.org/perldoc?WebService::Pocket::Stats) object, which contains
+Stats will return a [WebService::Pocket::Stats](https://metacpan.org/pod/WebService::Pocket::Stats) object, which contains
 a few statistics about your `Pocket` account.
 
     # Get the stats object
