@@ -4,7 +4,7 @@ WebService::Pocket - Client for the Pocket api (http://getpocket.com/api/)
 
 # VERSION
 
-version 0.002
+version 0.003
 
 # SYNOPSIS
 
@@ -16,7 +16,7 @@ version 0.002
     );
 
     # Get list of read items as Array of WebService::Pocket::Item objects
-    my $items = $p->list( state => 1 );
+    my $items = $p->list( state => 'read' );
 
     # Add an item
     $p->add({ url => 'http://www.article.com', title => 'My Title' });
@@ -86,7 +86,7 @@ a list of [WebService::Pocket::Item](http://search.cpan.org/perldoc?WebService::
     my $items = $p->list;
 
 You can pass in any parameters available to the
-[Pocket API Get](http://getpocket.com/api/docs/#get) request.
+[Pocket API Get](http://getpocket.com/api/docs/\#get) request.
 
     # Get only read items, with tags
     $p->list( state = 0, tags => 1 );
@@ -133,4 +133,5 @@ not imply endorsement by the author.
 # CONTRIBUTORS
 
 - Andreas Marienborg <andreas.marienborg@gmail.com>
+- Paul Fenwick <pjf@perltraining.com.au>
 - ben hengst <notbenh@cpan.org>
